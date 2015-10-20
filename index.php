@@ -40,7 +40,8 @@ function sendMessage ($chat_id, $message){
 }
 
 function sendMessageReplayMarkup ($chat_id, $text, $reply_markup ){
-    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($text)."&parse_mode=null&disable_web_page_preview=false&reply_markup=".$reply_markup;
+    $url1 = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($text)."&parse_mode=null&disable_web_page_preview=false&reply_markup=".$reply_markup;
+    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($url1)."&parse_mode=null&disable_web_page_preview=false&reply_markup=".$reply_markup;
     file_get_contents($url);
 }
 ?>
