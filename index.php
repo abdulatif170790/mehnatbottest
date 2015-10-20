@@ -17,12 +17,12 @@ $text = $data['message']['text'];
 $tg->sendChatAction($chat_id, "javobni kuting...");
 $result = json_decode(file_get_contents('http://mehnat.uz/mehnatbot/mehnatbot.php'));
 
-if($text == "/start"){
-    $str = "";
-}
-elseif ($text == "/minimalka") {
+
+if ($text == "/minimalka") {
     $tg->sendMessage($chat_id, "Hozirgi kunda eng kam oylik ish haqi - ".$result['zarplata']." so'm");
 }
+
+
 elseif ($tg->startsWith($text, "/maosh")) {
 
     $string = "Maosh hisoblash uchun quyidagi ko'rinishda kiriting (1-21): \nMasalan: \n /maosh 7";
@@ -39,6 +39,9 @@ elseif ($tg->startsWith($text, "/maosh")) {
         } else $tg->sendMessage($chat_id, "Siz noto'g'ri razryad kiritdingiz:\n\n" . $string);
     }
 
+}
+else{
+    $tg->sendMessage($chat_id, json_encode($result));
 }
 
 
