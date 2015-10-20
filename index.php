@@ -39,7 +39,7 @@ $reply_markup = $tg->replyKeyboardMarkup($customKeyboard, true, true);
             $guessed = true;
         } else
             $tg->sendMessage($chat_id, 'Wrong number :/ try again', false, null, $reply_markup);
-} while (!$guessed);
+//} while (!$guessed);
 $updates = $tg->getWebhookUpdates();
 /*
 $updateArray = $tg->getWebhookUpdates();
