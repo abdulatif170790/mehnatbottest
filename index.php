@@ -9,7 +9,7 @@ $chatId = $updateArray['message']['chat']['id'];
 $text = $updateArray['message']['text'];
 
 switch ($text) {
-    case 'q':
+    case 'Q':
         $keyboard = [
             ['7', '8', '9'],
             ['4', '5', '6'],
@@ -19,16 +19,16 @@ switch ($text) {
         $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
         $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
         break;
-    case "w":
-        $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
+    case "W":
+        $reply_markup = $tg->replyKeyboardHide();
         $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
         break;
-    case "e":
-        $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
+    case "E":
+        $reply_markup = $tg->forceReply();
         $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
         break;
     default:
-        $tg->sendMessage($chatId, $text);
+        $tg->sendMessage($chatId, $chatId.$text);
         break;
 
 
