@@ -28,8 +28,8 @@ switch($message){
         ];
         $replay_markup = json_encode(compact('keyboard', 'resize_keyboard', 'one_time_keyboard', 'selective'));
 
-        sendMessage($chatId, "Iltimossss Komanda tanlang:\n/get - Malumot olish\n/minimalka - Eng kam oylik ish haqi");
-        sendMessage($chatId, $replay_markup);
+//        sendMessage($chatId, "Iltimossss Komanda tanlang:\n/get - Malumot olish\n/minimalka - Eng kam oylik ish haqi");
+        sendMessageReplayMarkup($chatId, $message, $replay_markup);
         break;
 }
 
@@ -39,4 +39,8 @@ function sendMessage ($chat_id, $message){
     file_get_contents($url);
 }
 
+function sendMessageReplayMarkup ($chat_id, $text, $reply_markup ){
+    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($text)."&parse_mode=null&disable_web_page_preview=false&reply_markup".$reply_markup;
+    file_get_contents($url);
+}
 ?>
