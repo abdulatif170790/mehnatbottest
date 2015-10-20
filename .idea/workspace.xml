@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bedf81a4-1ebd-4ba1-9e40-dc38b21e57bb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TelegramAPI.php" afterPath="$PROJECT_DIR$/TelegramAPI.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mehnatbottest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +28,8 @@
             <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/index.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.5840708">
-                    <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+                  <state vertical-scroll-proportion="0.2733485">
+                    <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
                     <folding />
                   </state>
                 </provider>
@@ -47,18 +49,13 @@
       <file leaf-file-name="TelegramAPI.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TelegramAPI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49457702">
-              <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.46203905">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="e#272#322#0#PHP" expanded="false" />
                 <element signature="e#586#729#0#PHP" expanded="false" />
                 <element signature="n#forwardMessage#0;n#TelegramAPI#0;n#!!top" expanded="false" />
                 <element signature="n#sendPhoto#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-                <element signature="n#sendChatAction#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-                <element signature="n#getWebhookUpdates#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-                <element signature="n#replyKeyboardMarkup#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-                <element signature="n#replyKeyboardHide#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-                <element signature="n#forceReply#0;n#TelegramAPI#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -224,26 +221,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TelegramAPI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49457702">
-          <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.46203905">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="e#272#322#0#PHP" expanded="false" />
             <element signature="e#586#729#0#PHP" expanded="false" />
             <element signature="n#forwardMessage#0;n#TelegramAPI#0;n#!!top" expanded="false" />
             <element signature="n#sendPhoto#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-            <element signature="n#sendChatAction#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-            <element signature="n#getWebhookUpdates#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-            <element signature="n#replyKeyboardMarkup#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-            <element signature="n#replyKeyboardHide#0;n#TelegramAPI#0;n#!!top" expanded="false" />
-            <element signature="n#forceReply#0;n#TelegramAPI#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5840708">
-          <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.2733485">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding />
         </state>
       </provider>

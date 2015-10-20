@@ -62,22 +62,8 @@ class TelegramAPI
 
     public function sendChatAction($chat_id, $action)
     {
-        $actions = array(
-            'typing',
-            'upload_photo',
-            'record_video',
-            'upload_video',
-            'record_audio',
-            'upload_audio',
-            'upload_document',
-            'find_location',
-        );
-        if (isset($action) && in_array($action, $actions)) {
-            $params = compact('chat_id', 'action');
-            return $this->sendRequest('sendChatAction', $params);
-        }
-
-        throw new Exception('Invalid Action! Accepted value: ' . implode(', ', $actions));
+        $params = compact('chat_id', 'action');
+        return $this->sendRequest('sendChatAction', $params);
     }
 
     private function sendRequest($method, $params)
