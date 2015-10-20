@@ -1,5 +1,5 @@
 <?php
-
+/*
 ini_set('error_reporting', E_ALL);
 require 'TelegramAPI.php';
 $tg = new TelegramAPI();
@@ -15,8 +15,8 @@ $text = $data['message']['text'];
 
 $tg->sendChatAction($chat_id, "natijani kuting...");
 $result = (array)json_decode(file_get_contents('http://mehnat.uz/mehnatbot/mehnatbot.php'));
+
 print_r($result);
-echo "<br>------------------------------------------------<br><br>";
 
 if (strcmp($text, "/minimalka") === 0) {
     $natija = "Hozirgi kunda eng kam oylik ish haqi - " . $result['zarplata'] . " so'm";
@@ -33,10 +33,32 @@ elseif ($tg->startsWith($text, "/maosh")) {
         } else $natija = "Siz noto'g'ri razryad kiritdingiz:\n\n";
     }
 }
-else {
-    $natija = 'else';
-}
+
 $tg->sendMessage($chat_id, $natija);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //    case 'Q':
