@@ -15,7 +15,6 @@ $chat_id = $data['message']['chat']['id'];
 $text = $data['message']['text'];
 
 $tg->sendChatAction($chat_id, "javobni kuting...");
-$tg->sendMessage($chat_id, json_encode($data));
 
 switch ($text) {
     case 'Q':
