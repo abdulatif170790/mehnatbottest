@@ -11,10 +11,11 @@ $guessed = false;
 $sendQuestion = false;
 
 $data = $tg->getWebhookUpdates();
-$chatId = $data['message']['chat']['id'];
+$chat_id = $data['message']['chat']['id'];
 $text = $data['message']['text'];
 
-$tg->sendMessage($chatId, json_encode($data));
+$tg->sendChatAction($chat_id, "javobni kuting...");
+$tg->sendMessage($chat_id, json_encode($data));
 
 switch ($text) {
     case 'Q':
@@ -25,18 +26,18 @@ switch ($text) {
             ['0']
         ];
         $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
-        $tg->sendMessage($chatId, $text, false, null, $reply_markup);
+        $tg->sendMessage($chat_id, $text, false, null, $reply_markup);
         break;
     case "W":
         $reply_markup = $tg->replyKeyboardHide();
-        $tg->sendMessage($chatId, $text, false, null, $reply_markup);
+        $tg->sendMessage($chat_id, $text, false, null, $reply_markup);
         break;
     case "E":
         $reply_markup = $tg->forceReply();
-        $tg->sendMessage($chatId, $text, false, null, $reply_markup);
+        $tg->sendMessage($chat_id, $text, false, null, $reply_markup);
         break;
     default:
-        $tg->sendMessage($chatId, $chatId.$text);
+        $tg->sendMessage($chat_id, $chat_id.$text);
         break;
 }
 
