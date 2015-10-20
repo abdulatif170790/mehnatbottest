@@ -1,3 +1,5 @@
+<h2> Salom</h2>
+
 <?php
 /*
 ini_set('error_reporting', E_ALL);
