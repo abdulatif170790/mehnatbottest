@@ -15,13 +15,13 @@ $message = $updateArray['message']['text'];
 switch($message){
 
     case "/get":
-        sendMessage($chatId, "Biror bir malumot junatiladi!");
+        sendMessage($chatId, "/get test!");
         break;
     case "/minimalka";
-        sendMessage($chatId, "Bugungi kunda eng kam oylik ish haqi - 131000 so'm");
+        sendMessage($chatId, "oylik ish haqi - 131000 so'm");
         break;
     default:
-        sendMessage($chatId, "Komanda tanlang:\n/get - Malumot olish\n/minimalka - Eng kam oylik ish haqi");
+        sendMessage($chatId, "Iltimossss Komanda tanlang:\n/get - Malumot olish\n/minimalka - Eng kam oylik ish haqi");
         break;
 }
 
