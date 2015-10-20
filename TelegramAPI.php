@@ -9,7 +9,7 @@ class TelegramAPI
 
     function __construct()
     {
-        $this->baseURL = self::BASE_URL . self::TOKEN;
+        $this->baseURL = self::BASE_URL . self::TOKEN . '/';
     }
 
 //    public function sendMessage($chat_id, $text)
@@ -72,13 +72,12 @@ class TelegramAPI
             'upload_document',
             'find_location',
         );
-        if (isset($action) && in_array($action, $actions))
-        {
+        if (isset($action) && in_array($action, $actions)) {
             $params = compact('chat_id', 'action');
             return $this->sendRequest('sendChatAction', $params);
         }
 
-        throw new Exception('Invalid Action! Accepted value: '.implode(', ', $actions));
+        throw new Exception('Invalid Action! Accepted value: ' . implode(', ', $actions));
     }
 
     private function sendRequest($method, $params)
@@ -92,10 +91,6 @@ class TelegramAPI
 
         return $body;
     }
-
-
-
-
 
 
     public function replyKeyboardMarkup($keyboard, $resize_keyboard = false, $one_time_keyboard = false, $selective = false)
