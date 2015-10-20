@@ -3,43 +3,36 @@
 include_once 'TelegramAPI.php';
 ini_set('error_reporting', E_ALL);
 
-$telegram = new TelegramAPI();
-$updateArray = $telegram->getUpdatedArray();
+$tg = new TelegramAPI();
+$updateArray = $tg->getUpdatedArray();
 $chatId = $updateArray['message']['chat']['id'];
 $text = $updateArray['message']['text'];
 
-$telegram->sendMessage($chatId, $text);
-
-
-/*
-switch($message){
-    case "/get":
-        sendMessage($chatId, "/get test! ");
-        break;
-    case "/minimalka";
-        sendMessage($chatId, " dfgoylik ish haqi - 131000 so'm");
-        break;
-    default:
+switch ($text) {
+    case 'q':
         $keyboard = [
             ['7', '8', '9'],
             ['4', '5', '6'],
             ['1', '2', '3'],
             ['0']
         ];
-        $reply_markup = json_encode(compact('keyboard', 'resize_keyboard', 'one_time_keyboard', 'selective'));
-        sendMessageReplayMarkup($chatId, $chatId.$message, $reply_markup);
+        $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
+        $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
         break;
+    case "w":
+        $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
+        $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
+        break;
+    case "e":
+        $reply_markup = $tg->replyKeyboardMarkup($keyboard, true, true);
+        $tg->sendMessageReplyMarkup($chatId, $text, false, null, $reply_markup);
+        break;
+    default:
+        $tg->sendMessage($chatId, $text);
+        break;
+
+
 }
 
 
-function sendMessage ($chat_id, $message){
-    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($message);
-    file_get_contents($url);
-}
-
-function sendMessageReplayMarkup ($chat_id, $text, $reply_markup ){
-    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($text)."&disable_web_page_preview=false&reply_to_message_id=null&reply_markup=".$reply_markup;
-//    $url = $GLOBALS[website]."/sendMessage?chat_id=".$chat_id."&text=".urlencode($url1)."&parse_mode=null&disable_web_page_preview=false&reply_markup=".$reply_markup;
-    file_get_contents($url);
-}*/
 ?>
