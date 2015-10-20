@@ -15,10 +15,12 @@ $chat_id = $data['message']['chat']['id'];
 $text = $data['message']['text'];
 
 $tg->sendChatAction($chat_id, "javobni kuting...");
-$result = json_decode(file_get_contents('http://localhost/testmehnat/index.php'));
+$result = json_decode(file_get_contents('http://mehnat.uz/mehnatbot/mehnatbot.php'));
 
-
-if ($text == "/minimalka") {
+if($text == "/start"){
+    $str = "";
+}
+elseif ($text == "/minimalka") {
     $tg->sendMessage($chat_id, "Hozirgi kunda eng kam oylik ish haqi - ".$result['zarplata']." so'm");
 }
 elseif ($tg->startsWith($text, "/maosh")) {
