@@ -1,7 +1,7 @@
 <h2> Salom</h2>
 
 <?php
-/*
+
 ini_set('error_reporting', E_ALL);
 require 'TelegramAPI.php';
 $tg = new TelegramAPI();
@@ -37,7 +37,7 @@ elseif ($tg->startsWith($text, "/maosh")) {
 }
 
 $tg->sendMessage($chat_id, $natija);
-*/
+
 
 
 
