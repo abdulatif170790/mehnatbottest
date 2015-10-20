@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bedf81a4-1ebd-4ba1-9e40-dc38b21e57bb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TelegramAPI.php" afterPath="$PROJECT_DIR$/TelegramAPI.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mehnatbottest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +27,8 @@
             <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/index.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.76106197">
-                    <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.7876106">
+                    <caret line="73" column="2" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="2" />
                     <folding />
                   </state>
                 </provider>
@@ -47,8 +48,8 @@
       <file leaf-file-name="TelegramAPI.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TelegramAPI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35791758">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.49457702">
+              <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
               <folding>
                 <element signature="e#272#322#0#PHP" expanded="false" />
                 <element signature="e#586#729#0#PHP" expanded="false" />
@@ -72,8 +73,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/TelegramAPI.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -222,18 +223,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76106197">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TelegramAPI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35791758">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.49457702">
+          <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
           <folding>
             <element signature="e#272#322#0#PHP" expanded="false" />
             <element signature="e#586#729#0#PHP" expanded="false" />
@@ -245,6 +238,14 @@
             <element signature="n#replyKeyboardHide#0;n#TelegramAPI#0;n#!!top" expanded="false" />
             <element signature="n#forceReply#0;n#TelegramAPI#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7876106">
+          <caret line="73" column="2" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

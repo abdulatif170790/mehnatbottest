@@ -46,6 +46,8 @@ $updateArray = $tg->getWebhookUpdates();
 $chatId = $updateArray['message']['chat']['id'];
 $text = $updateArray['message']['text'];
 
+$tg->sendMessage($chatId, json_encode($updateArray));
+/*
 switch ($text) {
     case 'Q':
         $keyboard = [
@@ -69,6 +71,6 @@ switch ($text) {
         $tg->sendMessage($chatId, $chatId.$text);
         break;
 }
-
+*/
 
 ?>
