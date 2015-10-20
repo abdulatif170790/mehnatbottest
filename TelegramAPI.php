@@ -36,10 +36,14 @@ class TelegramAPI
 //        file_get_contents($url);
 //    }
 
-    public function sendMessage($chat_id, $text, $parse_mode = null, $disable_web_page_preview = false, $reply_to_message_id = null, $reply_markup = null)
-    {
-        $params = compact('chat_id', 'text', 'parse_mode', 'disable_web_page_preview', 'reply_to_message_id', 'reply_markup');
-
+    public function sendMessage(
+        $chat_id,
+        $text,
+        $disable_web_page_preview = false,
+        $reply_to_message_id = null,
+        $reply_markup = null
+    ) {
+        $params = compact('chat_id', 'text', 'disable_web_page_preview', 'reply_to_message_id', 'reply_markup');
         return $this->sendRequest('sendMessage', $params);
     }
 
@@ -79,22 +83,29 @@ class TelegramAPI
     }
 
 
-    public function replyKeyboardMarkup($keyboard, $resize_keyboard = false, $one_time_keyboard = false, $selective = false)
-    {
+    public function replyKeyboardMarkup(
+        $keyboard,
+        $resize_keyboard = false,
+        $one_time_keyboard = false,
+        $selective = false
+    ) {
         return json_encode(compact('keyboard', 'resize_keyboard', 'one_time_keyboard', 'selective'));
     }
 
     public static function replyKeyboardHide($selective = false)
     {
         $hide_keyboard = true;
+
         return json_encode(compact('hide_keyboard', 'selective'));
     }
 
     public static function forceReply($selective = false)
     {
         $force_reply = true;
+
         return json_encode(compact('force_reply', 'selective'));
     }
+
 
 }
 
