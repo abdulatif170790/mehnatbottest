@@ -13,7 +13,6 @@ $chatId = $updateArray['message']['chat']['id'];
 $message = $updateArray['message']['text'];
 
 switch($message){
-
     case "/get":
         sendMessage($chatId, "/get test!");
         break;
@@ -21,7 +20,16 @@ switch($message){
         sendMessage($chatId, "oylik ish haqi - 131000 so'm");
         break;
     default:
+        $keyboard = [
+            ['7', '8', '9'],
+            ['4', '5', '6'],
+            ['1', '2', '3'],
+            ['0']
+        ];
+        $replay_markup = json_encode(compact('keyboard', 'resize_keyboard', 'one_time_keyboard', 'selective'));
+
         sendMessage($chatId, "Iltimossss Komanda tanlang:\n/get - Malumot olish\n/minimalka - Eng kam oylik ish haqi");
+        sendMessage($chatId, $replay_markup);
         break;
 }
 
