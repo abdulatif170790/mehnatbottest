@@ -20,7 +20,7 @@ $customKeyboard = [
 ];
 $reply_markup = $tg->replyKeyboardMarkup($customKeyboard, true, true);
 
-do {
+//do {
     $data = $tg->getWebhookUpdates();
         if (is_null($chat_id))
             $chat_id = $data['message']['chat']['id'];
@@ -39,8 +39,8 @@ do {
             $guessed = true;
         } else
             $tg->sendMessage($chat_id, 'Wrong number :/ try again', false, null, $reply_markup);
-} while (!$guessed);
-$updates = $tg->getWebhookUpdates();
+//} while (!$guessed);
+//$updates = $tg->getWebhookUpdates();
 
 //$updateArray = $tg->getUpdatedArray();
 //$chatId = $updateArray['message']['chat']['id'];
