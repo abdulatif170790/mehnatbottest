@@ -3,16 +3,16 @@
 class TelegramAPI
 {
 
-    public $token = "148278479:AAFPMVrxoSPQG3xC1FUFvQL3nNgDOvZ1h-8";
-    public $website;
-    public $update;
+    private $token = "148278479:AAFPMVrxoSPQG3xC1FUFvQL3nNgDOvZ1h-8";
+    private $website;
+    private $update;
 
     public function getUpdatedArray()
     {
         return json_decode($this->update, TRUE);
     }
 
-    public function __construct()
+    function __construct()
     {
         $this->website = "https://api.telegram.org/bot" . $this->token;
         $this->update = file_get_contents("php://input");
@@ -20,15 +20,14 @@ class TelegramAPI
 
     public function sendMessage($chat_id, $text)
     {
-        $url = $GLOBALS['website'] .
-            'sendMessage?' .
+        $url = $this->website.
+            '/sendMessage?' .
             http_build_query(
                 array(
                     "chat_id" => $chat_id,
                     "text" => urlencode($text)
                 )
             );
-
         file_get_contents($url);
     }
 
