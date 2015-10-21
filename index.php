@@ -16,7 +16,8 @@ $text = $data['message']['text'];
 
 
 $tg->sendChatAction($chat_id, "natijani kuting...");
-$result = (array)json_decode(file_get_contents('http://mehnat.uz/mehnatbot/mehnatbot.php'));
+//$result = (array)json_decode(file_get_contents('http://mehnat.uz/mehnatbot/mehnatbot.php'));
+$result = (array)json_decode('{"zarplata":"118400","razryad":[{"id":"9","razryad":"1","koef":"2.476"},{"id":"10","razryad":"2","koef":"2.725"},{"id":"11","razryad":"3","koef":"2.998"},{"id":"12","razryad":"4","koef":"3.297"},{"id":"13","razryad":"5","koef":"3.612"},{"id":"14","razryad":"6","koef":"3.941"},{"id":"15","razryad":"7","koef":"4.284"},{"id":"16","razryad":"8","koef":"4.64"},{"id":"17","razryad":"9","koef":"4.997"},{"id":"18","razryad":"10","koef":"5.362"},{"id":"19","razryad":"11","koef":"5.733"},{"id":"20","razryad":"12","koef":"6.115"},{"id":"21","razryad":"13","koef":"6.503"},{"id":"22","razryad":"14","koef":"6.893"},{"id":"23","razryad":"15","koef":"7.292"},{"id":"24","razryad":"16","koef":"7.697"},{"id":"25","razryad":"17","koef":"8.106"},{"id":"26","razryad":"18","koef":"8.522"},{"id":"27","razryad":"19","koef":"8.943"},{"id":"28","razryad":"20","koef":"9.371"},{"id":"29","razryad":"21","koef":"9.804"},{"id":"30","razryad":"22","koef":"10.24"}]}');
 
 print_r($result);
 
@@ -35,7 +36,7 @@ elseif ($tg->startsWith($text, "/maosh")) {
         } else $natija = "Siz noto'g'ri razryad kiritdingiz:\n\n";
     }
 }
-
+echo "<br><br><br>".$natija;
 $tg->sendMessage($chat_id, $natija);
 
 
