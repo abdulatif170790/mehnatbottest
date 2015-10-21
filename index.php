@@ -33,7 +33,7 @@ elseif ($tg->startsWith($text, "/maosh")) {
         if ($number > 0 && $number <= 22) {
             $number--;
             $arr = (array) $result['razryad'][$number];
-            $natija = "Razryad - ".$arr['razryad']."\n Koeffitsient tarif - ".$arr['koef']."\n Sizning maoshingiz: ".($result['zarplata']*$arr['koef'])." so'm";
+            $natija = " Razryad - ".$arr['razryad']."\n Koeffitsient tarif - ".$arr['koef']."\n Sizning maoshingiz: ".($result['zarplata']*$arr['koef'])." so'm";
         } else $natija = "Siz noto'g'ri razryad kiritdingiz:\n\n";
     }
 }
