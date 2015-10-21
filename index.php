@@ -30,7 +30,8 @@ elseif ($tg->startsWith($text, "/maosh")) {
     else {
         $r = substr_replace($text, '', 0, 6);
         $number = (int)$r;
-        if ($number >= 0 && $number <= 22) {
+        if ($number > 0 && $number <= 22) {
+            $number--;
             $arr = (array) $result['razryad'][$number];
             $natija = "Razryad - ".$arr['razryad']."\n Koeffitsient tarif - ".$arr['koef']."\n Sizning maoshingiz: ".($result['zarplata']*$arr['koef'])." so'm";
         } else $natija = "Siz noto'g'ri razryad kiritdingiz:\n\n";
