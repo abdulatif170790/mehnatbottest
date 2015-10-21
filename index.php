@@ -1,9 +1,11 @@
-<h2> Salom</h2>
+<h2> Salom3</h2>
 
 <?php
 
 ini_set('error_reporting', E_ALL);
 require 'TelegramAPI.php';
+require 'HTTPRequest.php';
+
 $tg = new TelegramAPI();
 
 $chat_id = null;
@@ -17,15 +19,21 @@ $tg->sendChatAction($chat_id, "natijani kuting...");
 
 
 $urlmehnat = 'http://mehnat.uz/mehnatbot/mehnatbot.php';
-$ch = curl_init();
 
+$r = new HTTPRequest($urlmehnat);
+
+$result = (array)json_decode($r->DownloadToString());
+
+
+
+
+/*$ch = curl_init();
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_URL, $urlmehnat);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
 $result = (array)json_decode(curl_exec($ch));
 curl_close($ch);
-
+*/
 //$result = (array)json_decode('{"zarplata":"131300","razryad":[{"id":"9","razryad":"1","koef":"2.476"},{"id":"10","razryad":"2","koef":"2.725"},{"id":"11","razryad":"3","koef":"2.998"},{"id":"12","razryad":"4","koef":"3.297"},{"id":"13","razryad":"5","koef":"3.612"},{"id":"14","razryad":"6","koef":"3.941"},{"id":"15","razryad":"7","koef":"4.284"},{"id":"16","razryad":"8","koef":"4.64"},{"id":"17","razryad":"9","koef":"4.997"},{"id":"18","razryad":"10","koef":"5.362"},{"id":"19","razryad":"11","koef":"5.733"},{"id":"20","razryad":"12","koef":"6.115"},{"id":"21","razryad":"13","koef":"6.503"},{"id":"22","razryad":"14","koef":"6.893"},{"id":"23","razryad":"15","koef":"7.292"},{"id":"24","razryad":"16","koef":"7.697"},{"id":"25","razryad":"17","koef":"8.106"},{"id":"26","razryad":"18","koef":"8.522"},{"id":"27","razryad":"19","koef":"8.943"},{"id":"28","razryad":"20","koef":"9.371"},{"id":"29","razryad":"21","koef":"9.804"},{"id":"30","razryad":"22","koef":"10.24"}]}');
 
 print_r($result);
